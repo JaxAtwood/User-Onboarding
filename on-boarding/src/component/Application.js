@@ -94,8 +94,8 @@ const FormikRockApp = withFormik({
   handleSubmit(values, { setStatus }) {
     axios
       .post("https://reqres.in/api/users", values)
-      console.log(res);
       .then(res => {
+        console.log(res.data);
         setStatus(res.data);
       })
       .catch(err => console.log(err.response));
